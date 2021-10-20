@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Javascript</title>
+
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">
+      <h1>Registration</h1>
+    </div>
+    <div class="form">
+      <form name="form" onsubmit="return onSubmit()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" onchange="return validateName(event.target.value)">
+          <span class="text-error" id="text-error-name"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" onchange="return validateEmail(event.target.value)">
+          <span class="text-error" id="text-error-email"></span>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password">
+          <span class="text-error" id="text-error-password"></span>
+        </div>
+        <div class="form-group">
+          <label for="re_password">Confirm Password</label>
+          <input type="password" name="re_password" id="re_password">
+          <span class="text-error" id="text-error-repassword"></span>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function onSubmit() {
+      if (!formValid()) {
+        return false;
+      }
+      
+      alert('Registration submitted!');
+    }
+
+    function formValid() {
+      let isValid = true;
+      let name = document.getElementById('name');
+      let email = document.getElementById('email');
+      let password = document.getElementById('password');
+      let re_password = document.getElementById('re_password');
+      
+      if (!validateName(name.value)) {
+        isValid = false;
+      }
+
+      if (!validateEmail(email.value)) {
+        isValid = false;
+      }
+
+      if (password.value === '') {
+        password.classList.add('has-error');
+        isValid = false;
+      }
+
+      if (re_password.value === '') {
+        re_password.classList.add('has-error');
+        isValid = false;
+      }
+      
+      return isValid;
+    }
+
+    function validateName(value) {
+      let name = document.getElementById('name');
+      let errorName = document.getElementById('text-error-name');
+      if (value === '') {
+        name.classList.add('has-error');
+        errorName.innerHTML = 'Name cannot be empty';
+      } else {
+        name.classList.remove('has-error');
+        errorName.innerHTML = '';
+      }
+    }
+
+    function validateEmail(value) {
+      let email = document.getElementById('email');
+      let errorEmail = document.getElementById('text-error-email');
+      const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      
+      if (value === '') {
+        email.classList.add('has-error');
+        errorEmail.innerHTML = 'Email cannot be empty';
+        return false;
+      } else {
+        if (!re.test(value)) {
+          email.classList.add('has-error');
+          errorEmail.innerHTML = 'Email is not valid format';
+          return false;
+        } 
+      }
+
+      email.classList.remove('has-error');
+      errorEmail.innerHTML = '';
+      return true;
+    }
+
+    function validatePassword(value) {
+      let password = document.getElementById('password');
+      let errorPassword = document.getElementById('text-error-password');
+      if (value.lenght < 6) {
+        password.classList.add('has-error')
+      }
+    }
+  </script>
+</body>
+
+</html>
