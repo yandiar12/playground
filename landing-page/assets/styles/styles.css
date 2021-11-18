@@ -8,6 +8,7 @@ html, body {
   height: 100%;
   background-color: #f6f4d2;
   color: #f2e9e4;
+  scroll-behavior: smooth;
 }
 .text-color-primary {
   color: #284b63;
@@ -98,7 +99,7 @@ html, body {
 }
 .order-wrapper {
   background-color: #cbdfbd;
-  padding: 50px;
+  padding: 80px;
 }
 .form-control {
   border-radius: 0;
