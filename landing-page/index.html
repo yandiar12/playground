@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snackress</title>
+  <link rel="stylesheet" href="assets/bootstrap-4.6.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/styles/styles.css">
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <h3 class="navbar-brand">Snackress</h3>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#form-order">Order</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- navbar -->
+
+  <!-- header -->
+  <header id="home" class="header container-fluid">
+    <div class="overlay">
+      <div class="description">
+        <h1>Welcome to Snackress</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem id assumenda reprehenderit quidem ex eligendi iusto, voluptate adipisci nam nesciunt exercitationem. Neque explicabo, ipsum dolor rerum laborum sed natus id.</p>
+        <a href="#content" class="btn btn-outline-dark btn-lg btn-more">Tell Me More...!</a>
+      </div>
+    </div>
+  </header>
+  <!-- header -->
+
+  <!-- content -->
+  <div id="content" class="container content-wrapper">
+    <div class="content-title text-center mx-auto my-5">
+      <h2>Snack</h2>
+      <h5>What we have created</h5>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card shadow-sm mx-auto" style="width: 18rem;">
+          <img src="assets/img/deborah-rainford-zOlZgELBMRg-unsplash.jpg" class="card-img-top" alt="product">
+          <div class="card-body">
+            <h5 class="card-title">Snack 1 - Rp 8000,-</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card shadow-sm mx-auto" style="width: 18rem;">
+          <img src="assets/img/adele-de-bruyn-ZpW6_3RGmY4-unsplash.jpg" class="card-img-top" alt="product">
+          <div class="card-body">
+            <h5 class="card-title">Snack 2- Rp 15000,-</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card shadow-sm mx-auto" style="width: 18rem;">
+          <img src="assets/img/tyler-nix-_Fr3GfznvXg-unsplash.jpg" class="card-img-top" alt="product">
+          <div class="card-body">
+            <h5 class="card-title">Snack - Rp 12000,-</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- content -->
+
+  <!-- order -->
+  <div class="container-fluid order-wrapper">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-sm-12">
+          <div class="text-center"><h2 class="text-color-primary">Order Here</h2></div>
+          <form action="#" id="form-order">
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col">
+                  <select class="form-control" name="snack" id="snack">
+                    <option value="0">Pilih Snack</option>
+                    <option value="1">Snack 1</option>
+                    <option value="2">Snack 2</option>
+                    <option value="3">Snack 3</option>
+                  </select>
+                </div>
+                <div class="col">
+                  <input class="form-control" type="number" name="qty" id="qty" placeholder="Quantity" />
+                </div>  
+              </div>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="text" name="nama" id="nama" placeholder="Nama" />
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="alamat" id="alamat" cols="30" rows="5" placeholder="Alamat"></textarea>
+            </div>
+            <div class="form-group text-center">
+              <button class="btn btn-outline-secondary btn-lg btn-submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- order -->
+
+  <!-- contact -->
+  <div id="contact" class="container-fluid contact-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <div class="contact">
+            <h2>Snackress</h2>
+            <p>+62 813 2211 3322</p>
+            <P>snackress.id@gmail.com</P>
+            <p>Jl. Raya Cibatu-Limbangan No. 99 Kec. Cibatu Kab.Garut</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="about">
+            <h2>More about Snakress</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero suscipit esse nisi inventore beatae ex, odit expedita commodi illum nihil optio voluptatem rem quam recusandae placeat dignissimos natus sequi quasi?</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>Copyright <a href="https://github.com/yandiar12">@yandiar12</a> 2021</p>
+      </div>
+    </div>
+  </div>
+  <!-- contact -->
+
+  <script src="assets/jquery/jquery-3.6.0.min.js"></script>
+  <script src="assets/bootstrap-4.6.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
